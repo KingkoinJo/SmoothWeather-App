@@ -1,0 +1,36 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  background-color: rgb(106, 158, 253);
+}
+.app-placer {
+  background-color: aqua;
+  max-width: 700px;
+  margin: 30px auto;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+.input-box {
+  background-color: rgb(236, 242, 252);
+  border: none;
+  border-radius: 6px;
+  width: 80%;
+  font-size: 20px;
+  padding: 5px 20px;
+}
+.submit-box {
+  background-color: rgb(235, 228, 139);
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  padding: 5px 20px;
+}
+form {
+  margin: 030px auto;
+}
+.app-placer footer {
+  text-align: center;
+}
