@@ -40,6 +40,10 @@ body {
 }
 .weather-temperature {
   margin-right: 15px;
+  flex-shrink: 1;
+}
+.weather-info {
+  flex-shrink: 1;
 }
 .weather-temperature p {
   display: flex;
