@@ -70,5 +70,5 @@ main {
 }
 .app-placer main {
   width: 600px;
-  min-width: 100%;
+  max-width: 100%;
 }
