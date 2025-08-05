@@ -68,3 +68,7 @@ p {
 main {
   margin: 10px 0 30px 0;
 }
+.app-placer main {
+  width: 100%;
+  max-width: 650px;
+}
