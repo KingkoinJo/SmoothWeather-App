@@ -4,14 +4,14 @@ body {
   font-weight: weight;
   font-style: normal;
   font-variation-settings: "wdth" 100;
-  background-color: rgb(106, 158, 253);
+  background-color: rgb(57, 86, 138);
 }
 .app-placer {
-  background-color: aqua;
+  background-color: rgb(121, 223, 223);
   max-width: 700px;
   margin: 30px auto;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-  padding: 30px;
+  padding: 20px;
 }
 .input-box {
   background-color: rgb(236, 242, 252);
@@ -26,11 +26,45 @@ body {
   border: none;
   border-radius: 6px;
   font-size: 20px;
-  padding: 5px 20px;
-}
-form {
-  margin: 030px auto;
+  padding: 5px 25px;
 }
 .app-placer footer {
   text-align: center;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.weather-body {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0 40px;
+}
+.weather-temperature {
+  margin-right: 15px;
+}
+.weather-temperature p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 60px;
+  font-weight: 550;
+  color: black;
+}
+
+.weather-temperature span {
+  display: block;
+}
+.weather-unit {
+  font-size: 25px;
+  margin-top: -15px;
+}
+.weather-icon {
+  margin-top: 5px;
+}
+
+p {
+  line-height: 10px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.6);
+}
+main {
+  margin: 10px 0 30px 0;
 }
