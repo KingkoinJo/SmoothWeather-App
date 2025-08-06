@@ -8,7 +8,8 @@ body {
 }
 .app-placer {
   background-color: rgb(121, 223, 223);
-  max-width: 700px;
+  width: 600px;
+  max-width: 600px;
   margin: 30px auto;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   padding: 20px;
@@ -18,17 +19,20 @@ body {
   border: none;
   border-radius: 6px;
   width: 80%;
-  font-size: 20px;
-  padding: 5px 20px;
+  font-size: 18px;
+  padding: 10px 20px;
 }
 .submit-box {
   background-color: rgb(235, 228, 139);
   border: none;
   border-radius: 6px;
-  font-size: 20px;
-  padding: 5px 25px;
+  margin-left: 5px;
+  font-size: 18px;
+  padding: 10px 20px;
 }
 .app-placer footer {
+  border-top: 1px solid#b8a1f3;
+  padding-top: 10px;
   text-align: center;
   font-size: 13px;
   color: rgba(0, 0, 0, 0.6);
@@ -36,43 +40,41 @@ body {
 .weather-body {
   display: flex;
   justify-content: space-between;
-  margin: 30px 0 40px;
-}
-.weather-temperature {
-  margin-right: 15px;
-  flex-shrink: 1;
+  border-top: 1px solid#b8a1f3;
+  margin-top: 20px;
 }
 .weather-info {
-  flex-shrink: 1;
+  margin-top: 15px;
 }
-.weather-temperature p {
+
+.weather-temperature {
   display: flex;
   justify-content: space-between;
-  font-size: 60px;
   font-weight: 550;
   color: black;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+strong {
+  color: rgb(214, 2, 37);
 }
 
 .weather-temperature span {
   display: block;
 }
+.weather-digit {
+  font-size: 88px;
+}
 .weather-unit {
   font-size: 25px;
-  margin-top: -15px;
+  margin-top: 25px;
 }
 .weather-icon {
-  margin-top: 5px;
+  margin-top: 35px;
+  font-size: 50px;
 }
 
 p {
-  line-height: 10px;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.6);
-}
-main {
-  margin: 10px 0 30px 0;
-}
-.app-placer main {
-  width: 600px;
-  max-width: 100%;
 }
