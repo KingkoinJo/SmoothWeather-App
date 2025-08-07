@@ -4,7 +4,7 @@ body {
   font-weight: weight;
   font-style: normal;
   font-variation-settings: "wdth" 100;
-  background-color: rgb(57, 86, 138);
+  background-color: rgb(1, 43, 121);
 }
 .app-placer {
   background-color: rgb(121, 223, 223);
@@ -63,6 +63,7 @@ strong {
   display: block;
 }
 .weather-digit {
+  margin-left: 5px;
   font-size: 88px;
 }
 .weather-unit {
@@ -70,8 +71,9 @@ strong {
   margin-top: 25px;
 }
 .weather-icon {
-  margin-top: 35px;
-  font-size: 50px;
+  margin-top: 20px;
+  width: 80px;
+  height: 80px;
 }
 
 p {
