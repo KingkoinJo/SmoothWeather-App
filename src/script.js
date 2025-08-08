@@ -57,15 +57,28 @@ function apiCall(city) {
     .then(updateInformation);
 }
 
+function formatForecastDate(date) {
+  let weekDays = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  let day = weekDays[date.getDay()];
+  return day;
+}
+
 function updateForecast(data) {
   console.log(data);
   let all = " ";
   for (i = 1; i < 6; i += 1) {
-    let things = `<div class="forecast-day forecast-info">${day}</div>
+    let dailyForecastt = data.daily[i];
+    let apiDay = dailyForecastt.time;
+    let day = new Date(apiDay * 1000);
+    let forecastDay = formatForecastDate(day);
+    let maxTemp = `${Math.round(dailyForecastt.temperature.maximum)}°`;
+    let minTemp = `${Math.round(dailyForecastt.temperature.minimum)}°`;
+
+    let things = `<div class="forecast-day forecast-info">${forecastDay}</div>
     <div class="forecast-icon forecast-info">🌥</div>
     <div class="forecast-temperatures forecast-info">
-    <span class="first-temp">15℃</span>
-    <span class="second-temp">9℃</span>
+    <span class="first-temp">${maxTemp}</span>
+    <span class="second-temp">${minTemp}</span>
     </div>`;
     all = `${all} <div>${things}</div>`;
   }

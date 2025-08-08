@@ -81,12 +81,10 @@ p {
   font-size: 18px;
   color: rgba(0, 0, 0, 0.6);
 }
-/*.forecast {
-  display: flex;
-}*/
+
 .forecast-info {
   text-align: center;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 .forecast {
   display: flex;
@@ -102,7 +100,7 @@ p {
 .first-temp {
   color: rgb(214, 2, 37);
   font-weight: 900;
-  padding-right: 10px;
+  padding-right: 5px;
 }
 
 .second-temp {
