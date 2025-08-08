@@ -46,7 +46,7 @@ function updateInformation(res) {
     windSpeed.innerHTML = "--";
     humidity.innerHTML = "--";
     weatherCondition.innerHTML = "--";
-    temperatureIcon.innerHTML = "--";
+    temperatureIcon.innerHTML = "";
   }
 }
 function apiCall(city) {
@@ -67,14 +67,15 @@ function updateForecast(data) {
   console.log(data);
   let all = " ";
   for (i = 1; i < 6; i += 1) {
-    let dailyForecastt = data.daily[i];
-    let apiDay = dailyForecastt.time;
-    let day = new Date(apiDay * 1000);
-    let forecastDay = formatForecastDate(day);
-    let maxTemp = `${Math.round(dailyForecastt.temperature.maximum)}°`;
-    let minTemp = `${Math.round(dailyForecastt.temperature.minimum)}°`;
-    let iconUrl2 = dailyForecastt.condition.icon_url;
-    let things = `<div class="forecast-day forecast-info">${forecastDay}</div>
+    if (data.city !== undefined) {
+      let dailyForecastt = data.daily[i];
+      let apiDay = dailyForecastt.time;
+      let day = new Date(apiDay * 1000);
+      let forecastDay = formatForecastDate(day);
+      let maxTemp = `${Math.round(dailyForecastt.temperature.maximum)}°`;
+      let minTemp = `${Math.round(dailyForecastt.temperature.minimum)}°`;
+      let iconUrl2 = dailyForecastt.condition.icon_url;
+      let things = `<div class="forecast-day forecast-info">${forecastDay}</div>
     <div class="forecast-icon forecast-info">  <img
                 src=${iconUrl2}
                 alt=""
@@ -83,9 +84,10 @@ function updateForecast(data) {
     <span class="first-temp">${maxTemp}</span>
     <span class="second-temp">${minTemp}</span>
     </div>`;
-    all = `${all} <div>${things}</div>`;
+      all = `${all} <div>${things}</div>`;
+    }
+    forecastElement.innerHTML = all;
   }
-  forecastElement.innerHTML = all;
 }
 
 function forecastApiCall(city) {
