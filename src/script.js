@@ -73,9 +73,12 @@ function updateForecast(data) {
     let forecastDay = formatForecastDate(day);
     let maxTemp = `${Math.round(dailyForecastt.temperature.maximum)}°`;
     let minTemp = `${Math.round(dailyForecastt.temperature.minimum)}°`;
-
+    let iconUrl2 = dailyForecastt.condition.icon_url;
     let things = `<div class="forecast-day forecast-info">${forecastDay}</div>
-    <div class="forecast-icon forecast-info">🌥</div>
+    <div class="forecast-icon forecast-info">  <img
+                src=${iconUrl2}
+                alt=""
+              /></div>
     <div class="forecast-temperatures forecast-info">
     <span class="first-temp">${maxTemp}</span>
     <span class="second-temp">${minTemp}</span>
