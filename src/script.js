@@ -9,7 +9,7 @@ let temperatureValue = document.querySelector(".weather-digit");
 let temperatureUnit = document.querySelector(".weather-unit");
 let currentDate = document.querySelector(".current-date");
 let weatherCondition = document.querySelector(".weather-condition");
-
+let forecastElement = document.querySelector(".forecast");
 function displayDate() {
   let weekDays = [
     "Sunday",
@@ -32,7 +32,6 @@ function displayDate() {
 }
 currentDate.innerHTML = displayDate();
 function updateInformation(res) {
-  console.log(res);
   if (res.city !== undefined) {
     cityElement.innerHTML = res.city;
     temperatureValue.innerHTML = Math.round(res.temperature.current);
@@ -57,12 +56,37 @@ function apiCall(city) {
     .then((res) => res.json())
     .then(updateInformation);
 }
-let country = "Lagos";
-apiCall(country);
 
+function updateForecast(data) {
+  console.log(data);
+  let all = " ";
+  for (i = 1; i < 6; i += 1) {
+    let things = `<div class="forecast-day forecast-info">${day}</div>
+    <div class="forecast-icon forecast-info">🌥</div>
+    <div class="forecast-temperatures forecast-info">
+    <span class="first-temp">15℃</span>
+    <span class="second-temp">9℃</span>
+    </div>`;
+    all = `${all} <div>${things}</div>`;
+  }
+  forecastElement.innerHTML = all;
+}
+
+function forecastApiCall(city) {
+  let apiKey = "eo8b09c8c6a0484f543ct3b837fb6a19";
+  let apiUrl2 = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+  fetch(apiUrl2)
+    .then((res) => res.json())
+    .then(updateForecast);
+}
 function provideCity(event) {
   event.preventDefault();
   let inputForm = document.querySelector(".input-box");
   apiCall(inputForm.value);
+  forecastApiCall(inputForm.value);
 }
+
+apiCall("Lagos");
+forecastApiCall("Lagos");
+
 searchForm.addEventListener("submit", provideCity);

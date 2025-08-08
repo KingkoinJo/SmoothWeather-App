@@ -81,3 +81,31 @@ p {
   font-size: 18px;
   color: rgba(0, 0, 0, 0.6);
 }
+/*.forecast {
+  display: flex;
+}*/
+.forecast-info {
+  text-align: center;
+  margin: 20px 0;
+}
+.forecast {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 40px;
+}
+.forecast-day {
+  color: rgba(0, 0, 0, 0.6);
+}
+.forecast-icon {
+  font-size: 40px;
+}
+.first-temp {
+  color: rgb(214, 2, 37);
+  font-weight: 900;
+  padding-right: 10px;
+}
+
+.second-temp {
+  color: rgb(214, 2, 37);
+  font-weight: 400;
+}
