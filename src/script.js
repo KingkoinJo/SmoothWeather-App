@@ -47,6 +47,7 @@ function updateInformation(res) {
     humidity.innerHTML = "--";
     weatherCondition.innerHTML = "--";
     temperatureIcon.innerHTML = "";
+    temperatureValue.innerHTML = "--";
   }
 }
 function apiCall(city) {
